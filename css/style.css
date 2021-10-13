@@ -1,0 +1,178 @@
+/* Style
+---------------------------------------*/
+/*
+1) @import.
+2) Header.
+
+*/
+/* 1) @import
+-------------------------*/
+/* Variables
+---------------------------------------*/
+/* User Mixins 
+---------------------------------------*/
+.clearfix::after {
+  /*not a mixin*/
+  content: "";
+  clear: both;
+  display: table;
+}
+/* Body
+---------------------------------------*/
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #000;
+  background-color: #E5E5E5;
+}
+.wrapper {
+  background-color: #fff;
+}
+hr {
+  border: 1px solid #EFEFEF;
+  margin: 0;
+  border-top: none;
+}
+/* =Buttons
+---------------------------------------*/
+.button {
+  border: 2px solid #F13C6E;
+  border-radius: 40px;
+  padding: 10px 25px 10px 25px;
+  background-color: #fff;
+}
+/* =Graphics
+---------------------------------------*/
+.little-arrow-with-bg {
+  width: 21px;
+  height: 21px;
+  background-image: url('/static/images/small-arrow.png');
+}
+/* Headings
+---------------------------------------*/
+h1 {
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 700;
+  color: #fff;
+}
+/* =Links
+---------------------------------------*/
+a {
+  outline: none;
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  outline: none;
+  text-decoration: none;
+  color: #F13C6E;
+  cursor: pointer;
+}
+/* 2) Header
+-------------------------*/
+.main-header .navigation-secondary {
+  width: 1110px;
+  margin: 0 auto;
+  padding: 17px 0 16px 0;
+  text-align: center;
+}
+.main-header .navigation-secondary .list .list-item {
+  display: inline-block;
+  margin-right: 30px;
+}
+.main-header .navigation-secondary .list .list-item:last-child {
+  margin-right: 0;
+}
+.main-header .navigation-secondary .list .list-item .link {
+  display: block;
+  line-height: 16px;
+}
+.main-header .main-block {
+  margin: 0 auto;
+  width: 1110px;
+  padding: 40px 0 40px;
+}
+.main-header .main-block .main-block__left-block {
+  float: left;
+  position: relative;
+}
+.main-header .main-block .main-block__left-block .main-logo {
+  position: absolute;
+  top: -21px;
+}
+.main-header .main-block .main-block__left-block .main-title {
+  font-size: 36px;
+  line-height: 42px;
+  font-weight: 700;
+  color: #F13C6E;
+  text-transform: uppercase;
+  margin-left: 100px;
+  letter-spacing: 0.1em;
+}
+.main-header .main-block .main-block__right-block {
+  float: right;
+}
+.main-header .main-block .main-block__right-block .phone {
+  display: inline-block;
+  line-height: 19px;
+}
+.main-header .main-block .main-block__right-block .button-call {
+  display: inline-block;
+  line-height: 16px;
+  margin-left: 40px;
+}
+.main-header .navigation-main {
+  margin: 0 auto;
+  width: 1110px;
+  padding: 30px 0 30px;
+  text-align: center;
+}
+.main-header .navigation-main .list .item {
+  display: inline-block;
+  margin-right: 40px;
+}
+.main-header .navigation-main .list .item:last-child {
+  margin-right: 0;
+}
+.main-header .navigation-main .list .item .link {
+  display: block;
+  font-size: 16px;
+  line-height: 19px;
+}
+/* 2) About-chair 
+-------------------------*/
+.about-chair__wrapper {
+  background: url(../img/bgi.png) no-repeat;
+  background-position: 50% 50%;
+  /*расположение по центру*/
+  background-size: cover;
+  /*сохранить пропорции размер не менять*/
+}
+.about-chair {
+  margin: 0 auto;
+  width: 1110px;
+  padding: 192px 0 193px;
+}
+.about-chair .about-chair__title {
+  margin-bottom: 50px;
+}
+.about-chair .about-chair__description {
+  margin-bottom: 50px;
+  color: #fff;
+  width: 308px;
+}
+.about-chair .about-chair__button {
+  border-color: #fff;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  background-color: transparent;
+  color: #fff;
+  width: 170px;
+  text-align: center;
+}

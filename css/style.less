@@ -1,0 +1,121 @@
+/* Style
+---------------------------------------*/
+/*
+1) @import.
+2) Header.
+
+*/
+/* 1) @import
+-------------------------*/
+@import url("variables.less");
+@import url("mixins.less");
+@import url("body.less");
+@import url("buttons.less");
+@import url("graphics.less");
+@import url("headings.less");
+@import url("links.less");
+
+/* 2) Header
+-------------------------*/
+.main-header{
+	.navigation-secondary{
+		width: 1110px;
+		.center-block();
+		padding: 17px 0 16px 0;
+		text-align: center;
+		.list{
+			.list-item{
+				display: inline-block;
+				margin-right: 30px;
+				&:last-child{
+					margin-right: 0;
+				}
+				.link{
+					display: block;
+					line-height: 16px;
+				}
+			}
+		}
+	}
+	.main-block{
+		.center-block(1110px);
+		.main-paddings(40px, 0, 40px);
+		.main-block__left-block{
+			float: left;
+			position: relative;
+			.main-logo{
+				position: absolute;
+				top: -21px;
+			}
+			.main-title{
+				font-size: 36px;
+				line-height: 42px;
+				font-weight: 700;
+				color: @pink;
+				text-transform: uppercase;
+				margin-left: 100px;
+				letter-spacing: 0.1em;
+			}
+		}
+		.main-block__right-block{
+			float: right;
+			.phone{
+				display: inline-block;
+				line-height: 19px;
+			}
+			.button-call{
+				display: inline-block;
+				line-height: 16px;
+				margin-left: 40px;
+			}
+		}
+	}
+	.navigation-main{
+		.center-block(1110px);
+		.main-paddings(30px, 0, 30px);
+		text-align: center;
+		.list{
+			.item{
+				display: inline-block;
+				margin-right: 40px;
+				&:last-child{
+					margin-right: 0;
+				}
+				.link{
+					display: block;	
+					font-size: 16px;
+					line-height: 19px;				
+				}
+			}
+		}
+	}
+}
+
+/* 2) About-chair 
+-------------------------*/
+.about-chair__wrapper{
+	background: url(../img/bgi.png) no-repeat;
+	background-position: 50% 50%;/*расположение по центру*/
+	background-size: cover;/*сохранить пропорции размер не менять*/
+}
+.about-chair{
+	.center-block(1110px);
+	.main-paddings(192px, 0, 193px);
+	.about-chair__title{
+		margin-bottom: 50px;
+	}
+	.about-chair__description{
+		margin-bottom: 50px;
+		color: @white;
+		width: 308px;
+	}
+	.about-chair__button{
+		border-color: @white;
+		letter-spacing: 0.05em;
+		display: inline-block;
+		background-color: transparent;
+		color: @white;
+		width: 170px;
+		text-align: center;
+	}
+}

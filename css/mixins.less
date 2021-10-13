@@ -1,0 +1,25 @@
+/* User Mixins 
+---------------------------------------*/
+.main-paddings(@top, @lr, @bottom){
+    padding: @top @lr @bottom;
+}
+.center-block(){
+    margin: 0 auto;
+}
+.center-block(@width){
+  margin: 0 auto;
+  width: @width;
+}
+.clearfix::after {/*not a mixin*/
+    content: "";
+    clear: both;
+    display: table;
+}
+.center-abs-pos-hor(){
+  margin: auto;
+  left: 0; right: 0;
+}
+.center-abs-pos(){
+  margin: auto;
+  left: 0; right: 0; top: 0; bottom: 0;
+}
