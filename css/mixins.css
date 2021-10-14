@@ -1,8 +1,0 @@
-/* User Mixins 
----------------------------------------*/
-.clearfix::after {
-  /*not a mixin*/
-  content: "";
-  clear: both;
-  display: table;
-}

@@ -16,10 +16,25 @@
     display: table;
 }
 .center-abs-pos-hor(){
+  position: absolute;
   margin: auto;
   left: 0; right: 0;
 }
 .center-abs-pos(){
+  position: absolute;
   margin: auto;
   left: 0; right: 0; top: 0; bottom: 0;
 }
+.center-abs-ver(){
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.center-inline-ver(){ /*needed height of mother element*/
+  display: table-cell;
+  vertical-align: middle;
+}
+/*Центрирование инлайнов внутри блоков
+			font-size: 78px;
+			line-height: 119px;
+*/

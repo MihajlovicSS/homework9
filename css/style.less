@@ -3,17 +3,21 @@
 /*
 1) @import.
 2) Header.
+3) About-chair.
+4) Proposals.
+5) Bonus-shops.
+6) Impuls.
 
 */
 /* 1) @import
 -------------------------*/
-@import url("variables.less");
-@import url("mixins.less");
-@import url("body.less");
-@import url("buttons.less");
-@import url("graphics.less");
-@import url("headings.less");
-@import url("links.less");
+@import url("_variables");
+@import url("_mixins");
+@import url("_headings");
+@import url("_body");
+@import url("_buttons");
+@import url("_graphics");
+@import url("_links");
 
 /* 2) Header
 -------------------------*/
@@ -91,7 +95,7 @@
 	}
 }
 
-/* 2) About-chair 
+/* 3) About-chair 
 -------------------------*/
 .about-chair__wrapper{
 	background: url(../img/bgi.png) no-repeat;
@@ -117,5 +121,124 @@
 		color: @white;
 		width: 170px;
 		text-align: center;
+	}
+}
+/* 4) Proposals 
+-------------------------*/
+.proposals{
+	.center-block(1110px);
+	.main-paddings(80px, 0, 80px);
+	.proposals__title{
+		margin-bottom: 38px;
+	}
+	.proposal{
+		display: inline-block;
+		background-color: @white;
+		padding: 25px 30px;
+		width: 255px;
+		margin-right: 30px;
+		text-align: center;
+		&:last-child{
+			margin-right: 0;
+		}
+		.proposal__img{
+			margin-bottom: 20px;
+		}	
+		.proposal__description{
+			line-height: 20px;
+			margin-bottom: 20px;
+		}	
+		.proposal__price{
+			font-size: 21px;
+			line-height: 24px;
+			letter-spacing: 0.05em;
+			margin-bottom: 20px;
+			font-weight: 500;
+		}
+		.proposal__button{
+			display: inline-block;
+			min-width: 130px;
+			background-color: @pink;
+			color: @white;
+		}
+	}
+}
+/* 5) Bonus-shops 
+-------------------------*/
+.bonus-shops__wrapper{
+	.center-block(1110px);
+	.main-paddings(20px, 0, 50px);
+	.bonus-shops__block{
+		background-color: @pink;
+		min-width: 540px;
+		padding: 35px 40px;
+		display: inline-block;
+		position: relative;
+		vertical-align: top;
+		&:first-child{
+			margin-right: 30px;
+		}
+		.bonus-shops__title{
+			width: 250px;
+			margin-bottom: 21px;
+		}
+		.bonus-shops__description{
+			color: @white;
+			width: 250px;
+			margin-bottom: 25px;
+		}
+		.bonus-shops__form{
+			.bonus-shops__email{
+				width: 225px;
+				height: 35px;
+				padding: 9px 25px;
+				background-color: @white;
+				border-radius: 40px;
+				font-family: 'Roboto', sans-serif;
+				font-size: 14px;
+				line-height: 16px;
+				border: none;
+				&::placeholder{
+					color: #C4C4C4;
+				}
+			}
+		}
+		.bonus-shops__map{
+			display: inline-block;
+			line-height: 16px;
+			min-width: 170px;
+			background-color: @pink;
+			border: 2px solid @white;
+			color: @white;
+			text-align: center;
+			padding-top: 8px;
+			padding-bottom: 7px;
+		}
+		.bonus-shops__img{
+			.center-abs-ver();
+			right: 45px;
+		}
+	}
+}
+/* 6) Impuls 
+-------------------------*/
+.impuls__wrapper{
+	.center-block(1110px);
+	.main-paddings(50px, 0, 50px);
+	.impuls__item{
+		display: inline-block;
+		background-color: @white;
+ 		height: 119px;
+		width: 276px;
+		&:not(:nth-child(4n)){
+			margin-right: 1px;
+		}
+		margin-bottom: 1px;
+		text-align: center;
+		.impuls__link{
+			font-size: 78px;
+			line-height: 119px;
+			padding: 0 20px;
+		}
 	}
 }
