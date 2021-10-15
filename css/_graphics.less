@@ -1,55 +1,12 @@
 /* =Graphics
 ---------------------------------------*/
-.underline(@color){/*Mixin for pseudoelement*/
-	width: 70px;
-	height: 3px;
+.underline(@color, @width){/*Mixin for pseudoelement*/
+	width: @width;
 	background-color: @color;
 }
-.little-arrow-with-bg{
-	width: 21px;
-	height: 21px;
-	background-image: url('/static/images/small-arrow.png');	
-}
-.small-underline(@color, @bottom, @left, @translateX){/*Mixin for pseudoelement*/
-	width: 30px;
-	height: 2px;
-	background-color: @color;
-	position: absolute;
-	display: block;
-	content: "";
-	bottom: @bottom;
-	left: @left;
-	transform: translateX(@translateX);
-}
-.small-arrow-right(@size, @color){/*Mixin for pseudoelement*/
-	border: @size solid @color;
-	width: 0;
-	height: 0;
-	border-right-width: 0;
-	border-top-color: transparent;
-	border-bottom-color: transparent;
-}
-.circle-of-arrow(){
-	content: "";
-	position: absolute;
-	display: block;
-	position: relative;
-	width: 22px;
-	height: 22px;
-	border: 1px solid @main-brown;
-	border-radius: 22px;
-	top:5px;
-	left:5px;
-}
-.arrow-of-arrow(@top:7px, @left, @rotate){// 135deg -45deg 6 and 9 px
-	content: "";
-	position: absolute;
-	display: block;
-	width: 6px;
-	height: 6px;
-	border-top: 1px solid @main-brown;
-	border-left: 1px solid @main-brown;
-	transform: rotate(@rotate);
-	top: @top;
-	left: @left;
+.round(@color, @radius){
+	width: @radius;
+	height: @radius;
+	border: 2px solid @color;
+	border-radius: 50%;
 }

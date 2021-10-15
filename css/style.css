@@ -7,6 +7,10 @@
 4) Proposals.
 5) Bonus-shops.
 6) Impuls.
+7) Watched.
+8) Popular-categories.
+9) Social.
+10) Footer.
 
 */
 /* 1) @import
@@ -45,6 +49,12 @@ h3 {
   font-weight: 700;
   color: #fff;
 }
+h4 {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  color: #000;
+}
 /* Body
 ---------------------------------------*/
 * {
@@ -76,11 +86,6 @@ hr {
 }
 /* =Graphics
 ---------------------------------------*/
-.little-arrow-with-bg {
-  width: 21px;
-  height: 21px;
-  background-image: url('/static/images/small-arrow.png');
-}
 /* =Links
 ---------------------------------------*/
 a {
@@ -118,15 +123,15 @@ a:hover {
   width: 1110px;
   padding: 40px 0 40px;
 }
-.main-header .main-block .main-block__left-block {
+.main-header .main-block .logo-block {
   float: left;
   position: relative;
 }
-.main-header .main-block .main-block__left-block .main-logo {
+.main-header .main-block .logo-block .main-logo {
   position: absolute;
   top: -21px;
 }
-.main-header .main-block .main-block__left-block .main-title {
+.main-header .main-block .logo-block .main-title {
   font-size: 36px;
   line-height: 42px;
   font-weight: 700;
@@ -134,18 +139,6 @@ a:hover {
   text-transform: uppercase;
   margin-left: 100px;
   letter-spacing: 0.1em;
-}
-.main-header .main-block .main-block__right-block {
-  float: right;
-}
-.main-header .main-block .main-block__right-block .phone {
-  display: inline-block;
-  line-height: 19px;
-}
-.main-header .main-block .main-block__right-block .button-call {
-  display: inline-block;
-  line-height: 16px;
-  margin-left: 40px;
 }
 .main-header .navigation-main {
   margin: 0 auto;
@@ -164,6 +157,18 @@ a:hover {
   display: block;
   font-size: 16px;
   line-height: 19px;
+}
+.contacts {
+  float: right;
+}
+.contacts .phone {
+  display: inline-block;
+  line-height: 19px;
+}
+.contacts .button-call {
+  display: inline-block;
+  line-height: 16px;
+  margin-left: 40px;
 }
 /* 3) About-chair 
 -------------------------*/
@@ -196,42 +201,56 @@ a:hover {
   width: 170px;
   text-align: center;
 }
-/* 4) Proposals 
+.about-chair .about-chair__button:hover {
+  border-color: #F13C6E;
+  color: #F13C6E;
+  background-color: #fff;
+}
+/* 4) Proposals and 7) Watched
 -------------------------*/
-.proposals {
+.proposals,
+.watched__wrapper {
   margin: 0 auto;
   width: 1110px;
   padding: 80px 0 80px;
 }
-.proposals .proposals__title {
+.proposals .proposals__title,
+.watched__wrapper .proposals__title {
   margin-bottom: 38px;
 }
-.proposals .proposal {
+.proposals .proposal,
+.watched__wrapper .proposal {
   display: inline-block;
   background-color: #fff;
   padding: 25px 30px;
   width: 255px;
   margin-right: 30px;
   text-align: center;
+  vertical-align: top;
 }
-.proposals .proposal:last-child {
+.proposals .proposal:last-child,
+.watched__wrapper .proposal:last-child {
   margin-right: 0;
 }
-.proposals .proposal .proposal__img {
+.proposals .proposal .proposal__img,
+.watched__wrapper .proposal .proposal__img {
   margin-bottom: 20px;
 }
-.proposals .proposal .proposal__description {
+.proposals .proposal .proposal__description,
+.watched__wrapper .proposal .proposal__description {
   line-height: 20px;
   margin-bottom: 20px;
 }
-.proposals .proposal .proposal__price {
+.proposals .proposal .proposal__price,
+.watched__wrapper .proposal .proposal__price {
   font-size: 21px;
   line-height: 24px;
   letter-spacing: 0.05em;
   margin-bottom: 20px;
   font-weight: 500;
 }
-.proposals .proposal .proposal__button {
+.proposals .proposal .proposal__button,
+.watched__wrapper .proposal .proposal__button {
   display: inline-block;
   min-width: 130px;
   background-color: #F13C6E;
@@ -289,6 +308,11 @@ a:hover {
   padding-top: 8px;
   padding-bottom: 7px;
 }
+.bonus-shops__wrapper .bonus-shops__block .bonus-shops__map:hover {
+  border-color: #F13C6E;
+  color: #F13C6E;
+  background-color: #fff;
+}
 .bonus-shops__wrapper .bonus-shops__block .bonus-shops__img {
   position: absolute;
   top: 50%;
@@ -317,4 +341,101 @@ a:hover {
   font-size: 78px;
   line-height: 119px;
   padding: 0 20px;
+}
+/* 7) Watched 
+-------------------------*/
+.watched__wrapper {
+  padding: 30px 0 81px;
+}
+.watched__wrapper .watched__title {
+  margin-bottom: 38px;
+}
+/* 8) Popular-categories 
+-------------------------*/
+.popular-categories__wrapper {
+  background-color: #fff;
+}
+.popular-categories__wrapper .popular-categories {
+  margin: 0 auto;
+  width: 1110px;
+  padding: 60px 0 60px;
+}
+.popular-categories__wrapper .popular-categories .popular-categories__section {
+  display: inline-block;
+  vertical-align: top;
+}
+.popular-categories__wrapper .popular-categories .popular-categories__section:not(:last-child) {
+  margin-right: 30px;
+}
+.popular-categories__wrapper .popular-categories .popular-categories__section .popular-categories__title {
+  width: 99px;
+  margin-bottom: 30px;
+}
+.popular-categories__wrapper .popular-categories .popular-categories__section .divider {
+  /*Mixin for pseudoelement*/
+  width: 255px;
+  background-color: #EFEFEF;
+  margin-bottom: 25px;
+}
+.popular-categories__wrapper .popular-categories .popular-categories__section .popular-categories__nav {
+  max-width: 255px;
+}
+.popular-categories__wrapper .popular-categories .popular-categories__section .popular-categories__nav .popular-categories__link {
+  color: #828282;
+  font-size: 12px;
+  line-height: 28px;
+}
+.popular-categories__wrapper .popular-categories .popular-categories__section .popular-categories__nav .popular-categories__link:hover {
+  color: #343434;
+}
+/* 9) Social 
+-------------------------*/
+.socials__wrapper {
+  background-color: #fff;
+  margin-top: 1px;
+}
+.socials__wrapper .socials {
+  margin: 0 auto;
+  width: 1110px;
+  padding: 40px 0 40px;
+}
+.socials__wrapper .socials .social {
+  float: left;
+}
+.socials__wrapper .socials .social .social__icon {
+  width: 45px;
+  height: 45px;
+  border: 2px solid #F13C6E;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+}
+.socials__wrapper .socials .social .social__icon .social__link {
+  font-size: 20px;
+  line-height: 44px;
+}
+.socials__wrapper .socials .social .social__icon:nth-child(3) .social__link {
+  line-height: 45px;
+}
+.socials__wrapper .socials .social .social__icon:nth-child(4) .social__link {
+  line-height: 49px;
+}
+.socials__wrapper .socials .social .social__icon:not(:last-child) {
+  margin-right: 20px;
+}
+/* 10) Footer
+-------------------------*/
+.footer-wrapper {
+  margin: 0 auto;
+  width: 1110px;
+  padding: 25px 0 25px;
+  font-size: 12px;
+  line-height: 14px;
+}
+.footer-wrapper .copyrights {
+  float: left;
+}
+.footer-wrapper .policy {
+  float: right;
 }
